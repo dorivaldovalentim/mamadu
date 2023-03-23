@@ -15,7 +15,10 @@ const data = [
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <a href="/" class="navbar-brand fw-bold">Mamadu</a>
+      <a href="/" class="navbar-brand fw-bold text-uppercase"
+        ><span class="text-primary">Mam</span
+        ><span class="text-secondary">adu</span></a
+      >
 
       <button
         class="navbar-toggler"
