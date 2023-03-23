@@ -56,7 +56,7 @@
               aria-label="Search"
             />
             <button class="btn btn-outline-success" type="submit">
-              Search
+              <i class="bi bi-wifi"></i>
             </button>
           </form>
         </div>
