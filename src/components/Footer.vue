@@ -18,7 +18,7 @@ const socialNetworks = [
               ><span class="text-secondary">adu</span>
             </h2>
           </a>
-          <p class="fw-bold">
+          <p class="fs-5 fw-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
             labore.
           </p>
