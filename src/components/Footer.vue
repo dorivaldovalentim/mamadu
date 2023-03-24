@@ -26,16 +26,16 @@ const socialNetworks = [
         <div class="col-12 col-md-3 col-lg-2">
           <h3 class="h4 fw-bold text-primary">Title</h3>
           <ul class="list-unstyled">
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 1</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 2</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 3</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 4</a>
             </li>
           </ul>
@@ -43,16 +43,16 @@ const socialNetworks = [
         <div class="col-12 col-md-3 col-lg-2">
           <h3 class="h4 fw-bold text-primary">Title</h3>
           <ul class="list-unstyled">
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 1</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 2</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 3</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 4</a>
             </li>
           </ul>
@@ -60,16 +60,16 @@ const socialNetworks = [
         <div class="col-12 col-md-3 col-lg-2">
           <h3 class="h4 fw-bold text-primary">Title</h3>
           <ul class="list-unstyled">
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 1</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 2</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 3</a>
             </li>
-            <li>
+            <li class="mb-1">
               <a href="" class="text-primary text-decoration-none">Link 4</a>
             </li>
           </ul>

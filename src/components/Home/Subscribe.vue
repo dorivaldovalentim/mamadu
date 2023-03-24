@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <section class="subscribe bg-primary py-4">
+  <section class="subscribe bg-primary py-5">
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-md-3 col-lg-2 border-end border-3 py-4">
