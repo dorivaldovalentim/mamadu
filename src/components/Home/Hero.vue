@@ -25,7 +25,7 @@ const data = [
 </script>
 
 <template>
-  <header>
+  <header class="mt-3 mb-5">
     <div class="container">
       <div class="row align-items-center flex-fill">
         <div class="col-12 col-md-5 col-lg-5">

@@ -44,4 +44,7 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
+.why-choose-us {
+  margin-top: 150px;
+}
 </style>

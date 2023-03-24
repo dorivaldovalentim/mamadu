@@ -1,5 +1,6 @@
 <script  setup>
 import Hero from "./../components/Home/Hero.vue";
+import GetMobileApp from "./../components/Home/GetMobileApp.vue";
 import WhyChooseUs from "./../components/Home/WhyChooseUs.vue";
 import Testimonials from "./../components/Home/Testimonials.vue";
 import Ads from "../components/Home/Ads.vue";
@@ -8,6 +9,7 @@ import Subscribe from "./../components/Home/Subscribe.vue";
 
 <template>
   <Hero></Hero>
+  <GetMobileApp></GetMobileApp>
   <WhyChooseUs></WhyChooseUs>
   <Ads></Ads>
   <Testimonials></Testimonials>
