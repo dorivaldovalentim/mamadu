@@ -25,7 +25,7 @@ const data = [
 </script>
 
 <template>
-  <section class="testimonials py-4">
+  <section class="testimonials py-4 my-5">
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-md-5 col-lg-5">
@@ -85,6 +85,8 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/variables";
+
 .testimonial-image {
   position: relative;
 
@@ -94,7 +96,7 @@ const data = [
     top: 20px;
     width: 400px;
     height: 400px;
-    background: red;
+    background: $secondary-color;
     border-radius: 50%;
     z-index: -1;
   }

@@ -86,7 +86,6 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
-// @import './../assets/scss/variables';
 .dropdown-toggle::after {
   content: none;
 }
