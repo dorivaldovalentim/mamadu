@@ -33,6 +33,7 @@ const data = [
             <img
               src="/src/assets/images/testimonial/banner.png"
               alt="Testimonials image"
+              class="w-100"
             />
           </div>
         </div>
@@ -70,10 +71,6 @@ const data = [
                     class="bi me-1"
                   ></i>
                   {{ item.stars }}
-                  <!-- {{
-                    data.reduce((total, key) => (total += key.stars), 0) /
-                    data.length
-                  }} -->
                 </p>
               </div>
             </div>
@@ -86,19 +83,4 @@ const data = [
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
-
-.testimonial-image {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 20px;
-    width: 400px;
-    height: 400px;
-    background: $secondary-color;
-    border-radius: 50%;
-    z-index: -1;
-  }
-}
 </style>
