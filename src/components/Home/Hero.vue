@@ -22,12 +22,19 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
   },
 ];
+
+const socialNetworks = [
+  { name: "LinkedIn", link: "https://linkedin.com", icon: "bi-linkedin" },
+  { name: "Instagram", link: "https://instagram.com", icon: "bi-instagram" },
+  { name: "Twitter", link: "https://twitter.com", icon: "bi-twitter" },
+  { name: "Facebook", link: "https://facebook.com", icon: "bi-facebook" },
+];
 </script>
 
 <template>
-  <header class="mt-3 mb-5">
-    <div class="container">
-      <div class="row align-items-center flex-fill">
+  <header class="mt-5 mb-5 d-flex">
+    <div class="container d-flex">
+      <div class="row align-items-center">
         <div class="col-12 col-md-5 col-lg-5">
           <img
             src="/src/assets/images/banner.png"
@@ -42,7 +49,9 @@ const data = [
             até sua <span class="text-secondary">porta</span>
           </h1>
 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p class="my-4 fs-4 text-primary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
 
           <div class="d-flex">
             <a href="#" class="btn btn-primary rounded-pill fw-bold text-white"
@@ -88,27 +97,13 @@ const data = [
             class="list-unstyled d-flex flex-column align-items-end justify-content-between"
           >
             <li
+              v-for="(item, index) in socialNetworks"
+              :key="index"
               class="icons fs-4 shadow d-inline-flex my-4 justify-content-center align-items-center rounded-circle"
             >
-              <i class="bi bi-apple"></i>
-            </li>
-
-            <li
-              class="icons fs-4 shadow d-inline-flex my-4 justify-content-center align-items-center rounded-circle"
-            >
-              <i class="bi bi-apple"></i>
-            </li>
-
-            <li
-              class="icons fs-4 shadow d-inline-flex my-4 justify-content-center align-items-center rounded-circle"
-            >
-              <i class="bi bi-apple"></i>
-            </li>
-
-            <li
-              class="icons fs-4 shadow d-inline-flex my-4 justify-content-center align-items-center rounded-circle"
-            >
-              <i class="bi bi-apple"></i>
+              <a :href="item.link" target="_blank" class="text-primary"
+                ><i class="bi" :class="item.icon"></i
+              ></a>
             </li>
           </ul>
         </div>
@@ -118,6 +113,10 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
+header {
+  height: calc(100vh - 55px);
+  min-height: 600px;
+}
 .customers-pictures {
   width: 60px;
   height: 60px;

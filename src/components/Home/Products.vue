@@ -44,7 +44,7 @@ const data = [
 </script>
 
 <template>
-  <section class="products py-5">
+  <section id="products" class="products py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-3 col-lg-3">

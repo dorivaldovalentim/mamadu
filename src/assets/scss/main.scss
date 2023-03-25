@@ -2,3 +2,7 @@
 @import "./variables";
 @import "./responsive";
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+* {
+	box-sizing: border-box;
+}

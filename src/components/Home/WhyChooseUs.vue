@@ -22,7 +22,7 @@ const data = [
 </script>
 
 <template>
-  <section class="why-choose-us">
+  <section id="why-choose-us" class="why-choose-us">
     <div class="container">
       <div class="row justify-content-start justify-content-md-start justify-content-lg-around my-5">
         <h2 class="text-center text-primary mb-5">Porque nos escolher?</h2>

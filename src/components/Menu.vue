@@ -1,14 +1,9 @@
 <script setup>
 const data = [
-  { label: "Início", link: "/", items: [] },
-  {
-    label: "Sobre",
-    link: "/sobre",
-    subitems: [
-      { label: "História", link: "/historia" },
-      { label: "Contactos", link: "/contactos" },
-    ],
-  },
+  { label: "Início", link: "#", items: [] },
+  { label: "Porque nós?", link: "#why-choose-us", items: [] },
+  { label: "Produtos", link: "#products", items: [] },
+  { label: "Testemunho", link: "#testimonials", items: [] },
 ];
 </script>
 
@@ -71,7 +66,7 @@ const data = [
           </li>
         </ul>
 
-        <form class="d-flex" role="search">
+        <!-- <form class="d-flex" role="search">
           <button class="btn" type="submit">
             <i class="bi bi-search"></i>
           </button>
@@ -79,7 +74,7 @@ const data = [
           <RouterLink to="/login" class="btn btn-primary rounded-pill px-4"
             >Iniciar sessão</RouterLink
           >
-        </form>
+        </form> -->
       </div>
     </div>
   </nav>

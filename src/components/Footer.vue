@@ -1,6 +1,6 @@
 <script setup>
 const socialNetworks = [
-  { name: "LinkedIn", link: "https://facebook.com", icon: "bi-linkedin" },
+  { name: "LinkedIn", link: "https://linkedin.com", icon: "bi-linkedin" },
   { name: "Instagram", link: "https://instagram.com", icon: "bi-instagram" },
   { name: "Twitter", link: "https://twitter.com", icon: "bi-twitter" },
   { name: "Facebook", link: "https://facebook.com", icon: "bi-facebook" },

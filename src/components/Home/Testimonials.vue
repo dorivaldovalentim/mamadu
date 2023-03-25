@@ -25,7 +25,7 @@ const data = [
 </script>
 
 <template>
-  <section class="testimonials py-4 my-5">
+  <section id="testimonials" class="testimonials py-4 my-5">
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-md-5 col-lg-5">
