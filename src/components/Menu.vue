@@ -1,4 +1,6 @@
 <script setup>
+import Logo from "./Logo.vue";
+
 const data = [
   { label: "Início", link: "#", items: [] },
   { label: "Porque nós?", link: "#why-choose-us", items: [] },
@@ -10,10 +12,9 @@ const data = [
 <template>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-      <a href="/" class="navbar-brand fw-bold text-uppercase"
-        ><span class="text-primary">Mam</span
-        ><span class="text-secondary">adu</span></a
-      >
+      <a href="/" class="navbar-brand fw-bold text-uppercase">
+        <Logo />
+      </a>
 
       <button
         class="navbar-toggler"
@@ -83,5 +84,9 @@ const data = [
 <style lang="scss" scoped>
 .dropdown-toggle::after {
   content: none;
+}
+
+.navbar-brand {
+  width: 50px;
 }
 </style>
