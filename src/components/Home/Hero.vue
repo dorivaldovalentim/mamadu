@@ -32,7 +32,7 @@ const socialNetworks = [
 </script>
 
 <template>
-  <header class="mt-5 mb-5 d-flex">
+  <header class="mt-5 d-flex">
     <div class="container d-flex">
       <div class="row align-items-center">
         <div class="col-12 col-md-5 col-lg-5">
@@ -54,16 +54,8 @@ const socialNetworks = [
           </p>
 
           <div class="d-flex">
-            <a href="#" class="btn btn-primary rounded-pill fw-bold text-white"
-              >Como encomendar</a
-            >
-
-            <a
-              href="#"
-              class="btn btn-light ms-1 rounded-pill fw-bold"
-              style="background-color: #f7f7f7"
-              >Ver categorias</a
-            >
+            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
+            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
           </div>
 
           <div class="customers-pictures d-flex mt-3">
@@ -99,7 +91,7 @@ const socialNetworks = [
             <li
               v-for="(item, index) in socialNetworks"
               :key="index"
-              class="icons fs-4 shadow d-inline-flex my-4 justify-content-center align-items-center rounded-circle"
+              class="icons fs-4 shadow d-inline-flex justify-content-center align-items-center rounded-circle"
             >
               <a :href="item.link" target="_blank" class="text-primary"
                 ><i class="bi" :class="item.icon"></i
@@ -114,8 +106,9 @@ const socialNetworks = [
 
 <style lang="scss" scoped>
 header {
-  height: calc(100vh - 55px);
-  min-height: 600px;
+  height: calc(100vh - 155px);
+  min-height: 500px;
+  margin-bottom: 100px;
 }
 .customers-pictures {
   width: 60px;
@@ -125,5 +118,6 @@ header {
 .icons {
   width: 50px;
   height: 50px;
+  margin-block: 30px;
 }
 </style>

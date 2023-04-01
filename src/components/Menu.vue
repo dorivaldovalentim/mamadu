@@ -34,7 +34,7 @@ const data = [
             v-for="(item, index) in data"
             :key="index"
             :class="{ dropdown: item.subitems && item.subitems.length }"
-            class="nav-item"
+            class="nav-item mx-0 mx-md-3 mx-lg-4"
           >
             <a
               v-if="!(item.subitems && item.subitems.length)"

@@ -24,8 +24,12 @@ const data = [
 <template>
   <section id="why-choose-us" class="why-choose-us">
     <div class="container">
-      <div class="row justify-content-start justify-content-md-start justify-content-lg-around my-5">
-        <h2 class="text-center text-primary mb-5">Porque nos escolher?</h2>
+      <div
+        class="row justify-content-start justify-content-md-start justify-content-lg-around my-5"
+      >
+        <h2 class="display-5 fw-bold text-center text-primary">
+          Porque nos escolher?
+        </h2>
 
         <div
           v-for="(item, index) in data"
@@ -46,5 +50,9 @@ const data = [
 <style lang="scss" scoped>
 .why-choose-us {
   margin-top: 150px;
+
+  h2 {
+    margin-bottom: 70px;
+  }
 }
 </style>

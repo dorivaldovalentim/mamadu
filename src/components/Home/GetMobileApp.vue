@@ -5,13 +5,18 @@
     <div class="container">
       <div class="row align-items-stretch">
         <div class="col-12 col-md-6 col-lg-6 get-mobile-app-description">
-          <h2 class="text-white">
-            Compre <span class="text-secondary">qualquer coisa</span> perto de
-            si
+          <h2 class="display-4 fw-bold text-white">
+            Compre <span class="text-secondary">qualquer</span> <br />
+            <span class="text-secondary">coisa</span> perto de si
           </h2>
+
           <div class="d-flex">
-            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
-            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
+            <a href=""
+              ><img src="/src/assets/images/google-play.png" alt=""
+            /></a>
+            <a href=""
+              ><img src="/src/assets/images/google-play.png" alt=""
+            /></a>
           </div>
         </div>
 
@@ -29,7 +34,7 @@
 
 <style lang="scss" scoped>
 .get-mobile-app-description {
-  padding-block: 150px;
+  padding-block: 120px;
 }
 .phones-image {
   width: 650px;
