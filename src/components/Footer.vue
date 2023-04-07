@@ -42,8 +42,8 @@ const data = [
     <div class="container">
       <div class="row justify-content-between">
         <div class="col-12 col-md-4 col-lg-4">
-          <a href="" class="text-decoration-none d-inline-block w-25">
-            <Logo />
+          <a href="" class="text-decoration-none d-inline-block w-50">
+            <Logo :type="4" />
           </a>
 
           <p class="fs-5 pe-2 mt-4 text-primary">

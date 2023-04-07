@@ -1,14 +1,20 @@
 <script setup>
 import { defineProps } from "vue";
 
-defineProps({
+const props = defineProps({
   type: {
     type: Number,
-    default: 2,
+    default: 1,
   },
 });
+
+const { type } = props;
+
+const logo = function () {
+  return "/src/assets/images/logo/" + type + ".png";
+};
 </script>
 
 <template>
-  <img :src="'/src/assets/images/logo/1.png'" alt="" class="w-100" />
+  <img :src="logo()" alt="" class="w-100" />
 </template>
