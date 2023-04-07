@@ -1,46 +1,64 @@
-<script setup>
-const data = [
-  {
-    stars: 4.5,
-    price: 2000,
-    image: "./src/assets/images/products/mamao.png",
-    name: "Fácil encomendar",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+<script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+export default {
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
   },
-  {
-    stars: 4.2,
-    price: 2000,
-    image: "./src/assets/images/products/mamao.png",
-    name: "Entrega rápida",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+  components: {
+    Swiper,
+    SwiperSlide,
   },
-  {
-    stars: 3.7,
-    price: 2000,
-    image: "./src/assets/images/products/mamao.png",
-    name: "Pagamento seguro",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+  data() {
+    return {
+      data: [
+        {
+          stars: 4.5,
+          price: 2000,
+          image: "./src/assets/images/products/tomato.png",
+          name: "Tomate",
+        },
+        {
+          stars: 4.2,
+          price: 2000,
+          image: "./src/assets/images/products/mamao.png",
+          name: "Mamão",
+        },
+        {
+          stars: 3.7,
+          price: 2000,
+          image: "./src/assets/images/products/banana.png",
+          name: "Banana",
+        },
+        {
+          stars: 3.7,
+          price: 2000,
+          image: "./src/assets/images/products/grape.png",
+          name: "Uva",
+        },
+        {
+          stars: 3.7,
+          price: 2000,
+          image: "./src/assets/images/products/strawberry.png",
+          name: "Morangos",
+        },
+      ],
+    };
   },
-  {
-    stars: 3.7,
-    price: 2000,
-    image: "./src/assets/images/products/mamao.png",
-    name: "Pagamento seguro",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
-  },
-  {
-    stars: 3.7,
-    price: 2000,
-    image: "./src/assets/images/products/mamao.png",
-    name: "Pagamento seguro",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
-  },
-];
+};
 </script>
 
 <template>
@@ -54,31 +72,40 @@ const data = [
           <a href="" class="btn btn-primary rounded-pill">Ver todos</a>
         </div>
 
-        <div
-          v-for="(item, index) in data"
-          :key="index"
-          class="col-12 col-md-3 col-lg-3 mb-5"
+        <swiper
+          class="slider col-12 col-md-9 col-lg-9"
+          :slides-per-view="3"
+          :space-between="25"
+          @swiper="onSwiper"
+          @slideChange="onSlideChange"
         >
-          <div class="card shadow rounded-5 py-5 text-center">
-            <img
-              :src="item.image"
-              alt=""
-              class="w-50 mx-auto"
-              style="margin-top: -120px"
-            />
+          <swiper-slide
+            v-for="(item, index) in data"
+            :key="index"
+            class="slide-item col-12 col-md-3 col-lg-3"
+          >
+            <div class="card shadow rounded-5 py-5 text-center position-relative">
+              <img
+                :src="item.image"
+                alt=""
+                class="w-50 mx-auto position-absolute"
+                style="margin-top: -120px"
+              />
 
-            <h3 class="fw-bold mt-4">{{ item.name }}</h3>
+              <h3 class="fw-bold mt-4">{{ item.name }}</h3>
 
-            <p class="fs-4">
-              <span class="text-secondary fw-bold">{{ item.price }}</span> / KG
-            </p>
+              <p class="fs-4">
+                <span class="text-secondary fw-bold">{{ item.price }}</span> /
+                KG
+              </p>
 
-            <p class="fs-4 mb-0">
-              <i class="bi bi-star-fill text-secondary"></i>
-              {{ item.stars }}
-            </p>
-          </div>
-        </div>
+              <p class="fs-4 mb-0">
+                <i class="bi bi-star-fill text-secondary"></i>
+                {{ item.stars }}
+              </p>
+            </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
   </section>
@@ -86,6 +113,21 @@ const data = [
 
 <style lang="scss" scoped>
 .products {
-  margin-top: 200px;
+  margin-top: 50px;
+
+  img {
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+  }
+}
+
+.slider {
+  padding: 100px 20px 100px;
+
+  .card {
+    height: 250px;
+    max-height: 250px;
+  }
 }
 </style>
