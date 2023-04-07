@@ -1,27 +1,55 @@
-<script setup>
-const data = [
-  {
-    stars: 4.5,
-    image: "./src/assets/images/testimonial/user.webp",
-    name: "Fácil encomendar",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+<script>
+// Import Swiper Vue.js components
+import { Swiper, SwiperSlide } from "swiper/vue";
+
+// Import Swiper styles
+import "swiper/css";
+
+export default {
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log("slide change");
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+    };
   },
-  {
-    stars: 4.2,
-    image: "./src/assets/images/testimonial/user.jpeg",
-    name: "Entrega rápida",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+  components: {
+    Swiper,
+    SwiperSlide,
   },
-  {
-    stars: 3.7,
-    image: "./src/assets/images/testimonial/user.webp",
-    name: "Pagamento seguro",
-    testimonial:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+  data() {
+    return {
+      data: [
+        {
+          stars: 4.5,
+          image: "./src/assets/images/testimonial/user.webp",
+          name: "Fácil encomendar",
+          testimonial:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+        },
+        {
+          stars: 4.2,
+          image: "./src/assets/images/testimonial/user.jpeg",
+          name: "Entrega rápida",
+          testimonial:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+        },
+        {
+          stars: 3.7,
+          image: "./src/assets/images/testimonial/user.webp",
+          name: "Pagamento seguro",
+          testimonial:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit eum nam expedita reprehenderit magnam voluptas aliquid alias",
+        },
+      ],
+    };
   },
-];
+};
 </script>
 
 <template>
@@ -44,8 +72,13 @@ const data = [
             dizem sobre nós
           </h2>
 
-          <div>
-            <div
+          <swiper
+            class="slider col-12 col-md-10 col-lg-10 mt-5 mx-0"
+            :slides-per-view="1"
+            @swiper="onSwiper"
+            @slideChange="onSlideChange"
+          >
+            <swiper-slide
               v-for="(item, index) in data"
               :key="index"
               class="d-flex align-items-center"
@@ -73,8 +106,8 @@ const data = [
                   {{ item.stars }}
                 </p>
               </div>
-            </div>
-          </div>
+            </swiper-slide>
+          </swiper>
         </div>
       </div>
     </div>
