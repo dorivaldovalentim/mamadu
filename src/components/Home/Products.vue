@@ -24,6 +24,7 @@ export default {
   },
   data() {
     return {
+      activedItem: 0,
       data: [
         {
           stars: 4.5,
@@ -86,7 +87,10 @@ export default {
             :key="index"
             class="slide-item col-12 col-md-3 col-lg-3"
           >
-            <div class="card shadow rounded-5 py-5 text-center position-relative">
+            <div
+              :class="{ shadow: activedItem == index }"
+              class="card rounded-5 border-0 py-5 text-center position-relative"
+            >
               <img
                 :src="item.image"
                 alt=""
