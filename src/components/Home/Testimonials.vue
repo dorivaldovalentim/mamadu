@@ -53,7 +53,7 @@ export default {
 </script>
 
 <template>
-  <section id="testimonials" class="testimonials py-4 my-5">
+  <section id="testimonials" class="testimonials">
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-md-5 col-lg-5">
@@ -67,7 +67,7 @@ export default {
         </div>
 
         <div class="col-12 col-md-7 col-lg-7">
-          <h2 class="h2 fw-bold text-primary">
+          <h2 class="h1 fw-bold text-primary">
             O que nossos clientes <br />
             dizem sobre nós
           </h2>
@@ -75,6 +75,7 @@ export default {
           <swiper
             class="slider col-12 col-md-10 col-lg-10 mt-5 mx-0"
             :slides-per-view="1"
+            :space-between="25"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
           >
@@ -116,4 +117,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+.testimonials {
+  margin-block: 150px;
+}
 </style>
