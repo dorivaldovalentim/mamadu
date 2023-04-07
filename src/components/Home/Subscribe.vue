@@ -1,4 +1,5 @@
 <script setup>
+import Logo from "./../Logo.vue";
 </script>
 
 <template>
@@ -6,10 +7,10 @@
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div class="col-12 col-md-3 col-lg-2 border-end border-3 py-4">
-          <h2>
-            <span class="text-white">MAM</span
-            ><span class="text-secondary">ADU</span>
-          </h2>
+          <p class="mx-auto w-50">
+            <Logo />
+          </p>
+
           <p class="text-white">PREMIUM CUSTOMER</p>
         </div>
 
@@ -40,4 +41,7 @@
 </template>
 
 <style lang="scss" scoped>
+.subscribe {
+  box-shadow: 0 10px 20px #0003;
+}
 </style>
