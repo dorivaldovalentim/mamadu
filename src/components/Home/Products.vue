@@ -66,10 +66,12 @@ export default {
     <div class="container">
       <div class="row align-items-center">
         <div class="col-12 col-md-3 col-lg-3">
-          <h2 class="h3 fw-bold text-primary pe-4">
+          <h2 class="title fw-bold text-primary lh-base">
             Nossos produtos mais vendidos
           </h2>
-          <a href="" class="btn btn-primary rounded-pill">Ver todos</a>
+          <a href="" class="btn btn-primary rounded-pill mt-4 px-4"
+            >Ver todos</a
+          >
         </div>
 
         <swiper
@@ -115,6 +117,10 @@ export default {
 .products {
   margin-top: 50px;
 
+  .title {
+    font-size: 25pt;
+  }
+
   img {
     left: 50%;
     right: 50%;
@@ -126,7 +132,7 @@ export default {
   padding: 100px 20px 100px;
 
   .card {
-    height: 250px;
+    height: 500px;
     max-height: 250px;
   }
 }
