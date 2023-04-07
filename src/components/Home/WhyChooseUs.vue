@@ -48,8 +48,13 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/responsive";
 .why-choose-us {
   margin-top: 150px;
+
+  @include responsive(extra-small, small) {
+    margin-top: 50px;
+  }
 
   h2 {
     margin-bottom: 70px;

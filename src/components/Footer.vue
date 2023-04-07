@@ -46,7 +46,9 @@ const data = [
             <Logo :type="4" />
           </a>
 
-          <p class="fs-5 pe-2 mt-4 text-primary">
+          <p
+            class="fs-5 pe-2 pe-md-2 pe-lg-2 mt-4 text-primary text-center text-md-start text-lg-start"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
             labore.
           </p>
@@ -73,7 +75,9 @@ const data = [
       </div>
 
       <div class="border-bottom border-3 mt-3">
-        <ul class="list-unstyled d-flex">
+        <ul
+          class="list-unstyled d-flex justify-content-center justify-content-md-start justify-content-lg-start"
+        >
           <li v-for="(item, index) in socialNetworks" :key="index">
             <a
               :href="item.link"
@@ -94,8 +98,14 @@ const data = [
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/responsive";
+
 footer {
   margin-top: 150px;
+
+  @include responsive(extra-small, small) {
+    margin-top: 50px;
+  }
 
   a {
     color: #9ea8c2;

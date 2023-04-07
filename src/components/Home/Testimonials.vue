@@ -67,7 +67,9 @@ export default {
         </div>
 
         <div class="col-12 col-md-7 col-lg-7">
-          <h2 class="h1 fw-bold text-primary">
+          <h2
+            class="h1 fw-bold text-primary text-center text-md-start text-lg-start"
+          >
             O que nossos clientes <br />
             dizem sobre nós
           </h2>
@@ -116,9 +118,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/variables";
+@import "@/assets/scss/responsive";
 
 .testimonials {
   margin-block: 150px;
+
+  @include responsive(extra-small, small) {
+    margin-block: 50px;
+  }
 }
 </style>
