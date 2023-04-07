@@ -43,19 +43,25 @@ const socialNetworks = [
           />
         </div>
 
-        <div class="col-10 col-md-5 col-lg-5">
-          <h1 class="display-4 fw-bold">
+        <div class="col-12 col-md-5 col-lg-5">
+          <h1 class="text-center text-md-start text-lg-start display-4 fw-bold">
             Traga a <span class="text-secondary">loja</span> <br />
             até sua <span class="text-secondary">porta</span>
           </h1>
 
-          <p class="my-4 fs-4 text-primary">
+          <p
+            class="my-4 fs-4 text-primary text-center text-md-start text-lg-start"
+          >
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </p>
 
-          <div class="d-flex">
-            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
-            <a href=""><img src="/src/assets/images/google-play.png" alt=""></a>
+          <div class="d-none d-md-flex d-lg-flex">
+            <a href=""
+              ><img src="/src/assets/images/google-play.png" alt=""
+            /></a>
+            <a href=""
+              ><img src="/src/assets/images/google-play.png" alt=""
+            /></a>
           </div>
 
           <div class="customers-pictures d-flex mt-3">
@@ -86,7 +92,7 @@ const socialNetworks = [
 
         <div class="col-2 col-md-2 col-lg-2">
           <ul
-            class="list-unstyled d-flex flex-column align-items-end justify-content-between"
+            class="list-unstyled d-none d-md-flex d-lg-flex flex-column align-items-end justify-content-between"
           >
             <li
               v-for="(item, index) in socialNetworks"
