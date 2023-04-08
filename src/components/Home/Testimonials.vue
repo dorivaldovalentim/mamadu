@@ -84,18 +84,23 @@ export default {
             <swiper-slide
               v-for="(item, index) in data"
               :key="index"
-              class="d-flex align-items-center"
+              class="d-flex align-items-center flex-column flex-md-row flex-lg-row"
             >
               <img
                 :src="item.image"
                 :alt="'Testimonial user ' + item.name"
-                class="col-2 me-3 rounded-circle"
+                class="col-5 col-md-2 col-lg-2 me-3 rounded-circle"
               />
 
               <div>
-                <h3>{{ item.name }}</h3>
-                <p v-html="item.testimonial"></p>
-                <p>
+                <h3 class="text-center text-md-start text-lg-start">
+                  {{ item.name }}
+                </h3>
+                <p
+                  v-html="item.testimonial"
+                  class="text-center text-md-start text-lg-start"
+                ></p>
+                <p class="text-center text-md-start text-lg-start">
                   <i
                     v-for="i in 5"
                     :key="i"

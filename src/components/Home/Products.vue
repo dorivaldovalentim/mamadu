@@ -1,5 +1,7 @@
 <script>
 // Import Swiper Vue.js components
+import { Autoplay } from "swiper";
+
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
@@ -16,6 +18,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
+      modules: [Autoplay],
     };
   },
   components: {
@@ -78,9 +81,29 @@ export default {
         </div>
 
         <swiper
-          class="slider col-12 col-md-9 col-lg-9"
-          :slides-per-view="3"
+          class="slider col-9 col-md-9 col-lg-9"
           :space-between="25"
+          :grabCursor="true"
+          :loop="true"
+          :autoplay="{
+            delay: 2500,
+            disableOnInteraction: false,
+          }"
+          :breakpoints="{
+            '640': {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            '768': {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            '1024': {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }"
+          :modules="modules"
           @swiper="onSwiper"
           @slideChange="onSlideChange"
         >
@@ -91,7 +114,7 @@ export default {
           >
             <div
               :class="{ shadow: activedItem == index }"
-              class="card rounded-5 border-0 py-5 text-center position-relative"
+              class="card shadow-small rounded-5 border-0 py-5 text-center position-relative"
             >
               <img
                 :src="item.image"
@@ -120,6 +143,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "@/assets/scss/responsive";
+
 .products {
   margin-top: 50px;
 
@@ -140,6 +165,12 @@ export default {
   .card {
     height: 500px;
     max-height: 250px;
+  }
+}
+
+.shadow-small {
+  @include responsive(extra-small, small) {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
 }
 </style>

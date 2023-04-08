@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <section class="ads">
+  <section class="ads pt-4 pt-md-0 pt-lg-0">
     <div class="container">
       <div class="row align-items-center">
         <div
-          class="col-12 col-md-6 col-lg-6 text-center text-md-start text-lg-start"
+          class="col-12 col-md-6 col-lg-6 text-center text-md-start text-lg-start mb-5 mb-md-0 mb-lg-0"
         >
           <h2 class="text-white">
             <span class="display-2">Obtenha até</span> <br />

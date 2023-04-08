@@ -41,7 +41,9 @@ const data = [
   <footer>
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-12 col-md-4 col-lg-4">
+        <div
+          class="col-12 col-md-4 col-lg-4 text-center text-md-start text-lg-start"
+        >
           <a href="" class="text-decoration-none d-inline-block w-50">
             <Logo :type="4" />
           </a>

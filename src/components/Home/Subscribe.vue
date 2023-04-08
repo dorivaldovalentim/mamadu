@@ -6,7 +6,9 @@ import Logo from "./../Logo.vue";
   <section class="subscribe bg-primary py-5">
     <div class="container">
       <div class="row justify-content-between align-items-center">
-        <div class="col-12 col-md-3 col-lg-2 border-end border-3 py-4">
+        <div
+          class="col-6 col-md-3 col-lg-2 mx-auto border-md-end border-lg-end border-3 py-4"
+        >
           <p class="mx-auto w-50">
             <Logo />
           </p>
@@ -15,7 +17,7 @@ import Logo from "./../Logo.vue";
         </div>
 
         <div class="col-12 col-md-6 col-lg-6">
-          <p class="text-white">
+          <p class="text-white text-center text-md-start text-lg-start">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore,
             nemo. Necessitatibus quibusdam ab architecto voluptatibus ducimus
             voluptatem illum dolore placeat quod autem quaerat dolorem numquam
