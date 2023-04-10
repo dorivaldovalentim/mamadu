@@ -7,13 +7,14 @@ import Logo from "./../Logo.vue";
     <div class="container">
       <div class="row justify-content-between align-items-center">
         <div
-          class="col-6 col-md-3 col-lg-2 mx-auto border-md-end border-lg-end border-3 py-4"
+          class="col-6 col-md-3 col-lg-2 mx-auto mx-md-0 mx-lg-0 py-4 position-relative"
         >
-          <p class="mx-auto w-50">
-            <Logo />
+          <p class="mx-auto w-75">
+            <Logo :type="2" />
           </p>
-
-          <p class="text-white">PREMIUM CUSTOMER</p>
+          <hr
+            class="vertical-rule d-none d-md-inline-block d-lg-inline-block position-absolute border-0"
+          />
         </div>
 
         <div class="col-12 col-md-6 col-lg-6">
@@ -45,5 +46,16 @@ import Logo from "./../Logo.vue";
 <style lang="scss" scoped>
 .subscribe {
   box-shadow: 0 10px 20px #0003;
+
+  .vertical-rule {
+    height: 150px;
+    background: white;
+    width: 2px;
+    padding: 0;
+    right: -10%;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
 }
 </style>
