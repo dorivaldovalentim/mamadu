@@ -108,12 +108,13 @@ export default {
           @slideChange="onSlideChange"
         >
           <swiper-slide
+            v-slot="{ isActive }"
             v-for="(item, index) in data"
             :key="index"
             class="slide-item col-12 col-md-3 col-lg-3"
           >
             <div
-              :class="{ shadow: activedItem == index }"
+              :class="{ shadow: isActive }"
               class="card shadow-small rounded-5 border-0 py-5 text-center position-relative"
             >
               <img
@@ -169,6 +170,8 @@ export default {
 }
 
 .shadow-small {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04);
+
   @include responsive(extra-small, small) {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
