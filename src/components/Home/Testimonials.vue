@@ -66,7 +66,7 @@ export default {
           </div>
         </div>
 
-        <div class="col-12 col-md-7 col-lg-7">
+        <div class="col-12 col-md-7 col-lg-7 ps-md-5 ps-lg-5">
           <h2
             class="h1 fw-bold text-primary text-center text-md-start text-lg-start"
           >
