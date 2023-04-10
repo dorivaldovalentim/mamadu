@@ -13,7 +13,7 @@ const data = [
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
       <a href="/" class="navbar-brand fw-bold text-uppercase">
-        <Logo />
+        <Logo :type="4" />
       </a>
 
       <button
@@ -87,6 +87,6 @@ const data = [
 }
 
 .navbar-brand {
-  width: 50px;
+  width: 150px;
 }
 </style>
