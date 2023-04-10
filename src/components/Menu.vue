@@ -10,7 +10,7 @@ const data = [
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary pt-4">
     <div class="container">
       <a href="/" class="navbar-brand fw-bold text-uppercase">
         <Logo :type="4" />

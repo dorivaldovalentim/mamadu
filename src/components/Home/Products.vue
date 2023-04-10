@@ -150,7 +150,7 @@ export default {
   margin-top: 50px;
 
   .title {
-    font-size: 25pt;
+    font-size: 29pt;
   }
 
   img {

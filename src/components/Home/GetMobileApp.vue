@@ -39,6 +39,10 @@
 <style lang="scss" scoped>
 @import "@/assets/scss/responsive";
 
+.get-mobile-app {
+  box-shadow: 0 10px 20px #0003;
+}
+
 .get-mobile-app-description {
   padding-block: 120px;
 
