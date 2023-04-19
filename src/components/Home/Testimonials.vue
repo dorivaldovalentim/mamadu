@@ -1,5 +1,6 @@
 <script>
 // Import Swiper Vue.js components
+import { Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/vue";
 
 // Import Swiper styles
@@ -16,6 +17,7 @@ export default {
     return {
       onSwiper,
       onSlideChange,
+      modules: [Autoplay],
     };
   },
   components: {
@@ -78,6 +80,12 @@ export default {
             class="slider col-12 col-md-10 col-lg-10 mt-5 mx-0"
             :slides-per-view="1"
             :space-between="25"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            :modules="modules"
             @swiper="onSwiper"
             @slideChange="onSlideChange"
           >
