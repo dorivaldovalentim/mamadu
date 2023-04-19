@@ -1,0 +1,24 @@
+{
+  "name": "mamaduao",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "bootstrap": "5.2",
+    "jquery": "^3.6.4",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^9.2.0",
+    "vue": "^3.2.47",
+    "vue-router": "^4.1.6"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "sass": "^1.59.3",
+    "sass-loader": "^10.4.1",
+    "vite": "^4.1.4"
+  }
+}

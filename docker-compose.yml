@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  site:
+    container_name: mamaduao
+    entrypoint: 'npm run dev'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${APP_PORT}:5173
+    restart: always
