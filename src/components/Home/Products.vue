@@ -1,30 +1,9 @@
 <script>
-// Import Swiper Vue.js components
-import { Autoplay } from "swiper";
-
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
-import "swiper/css";
+import $ from "jquery";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel";
 
 export default {
-  setup() {
-    const onSwiper = (swiper) => {
-      console.log(swiper);
-    };
-    const onSlideChange = () => {
-      console.log("slide change");
-    };
-    return {
-      onSwiper,
-      onSlideChange,
-      modules: [Autoplay],
-    };
-  },
-  components: {
-    Swiper,
-    SwiperSlide,
-  },
   data() {
     return {
       activedItem: 0,
@@ -62,6 +41,30 @@ export default {
       ],
     };
   },
+  mounted() {
+    $(".slick-carousel").slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 3,
+          },
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+          },
+        },
+      ],
+    });
+  },
 };
 </script>
 
@@ -80,42 +83,10 @@ export default {
           >
         </div>
 
-        <swiper
-          class="slider col-9 col-md-9 col-lg-9"
-          :space-between="25"
-          :grabCursor="true"
-          :loop="true"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-          }"
-          :breakpoints="{
-            '640': {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            '768': {
-              slidesPerView: 3,
-              spaceBetween: 40,
-            },
-            '1024': {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }"
-          :modules="modules"
-          @swiper="onSwiper"
-          @slideChange="onSlideChange"
-        >
-          <swiper-slide
-            v-slot="{ isActive }"
-            v-for="(item, index) in data"
-            :key="index"
-            class="slide-item col-12 col-md-3 col-lg-3"
-          >
+        <div class="slider col-10 col-md-9 col-lg-9 slick-carousel mx-auto">
+          <div v-for="(item, index) in data" :key="index" class="slide-item">
             <div
-              :class="{ shadow: isActive }"
-              class="card shadow-small rounded-5 border-0 py-5 text-center position-relative"
+              class="shadow-small rounded-5 border-0 py-5 text-center position-relative mx-4"
             >
               <img
                 :src="item.image"
@@ -136,8 +107,8 @@ export default {
                 {{ item.stars }}
               </p>
             </div>
-          </swiper-slide>
-        </swiper>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -145,7 +116,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "@/assets/scss/responsive";
-
 .products {
   margin-top: 50px;
 
@@ -166,14 +136,25 @@ export default {
   .card {
     height: 500px;
     max-height: 250px;
+    background: rgba($color: #fff, $alpha: 0.5) !important;
+  }
+
+  .slide-item {
+    padding-block: 80px;
   }
 }
 
 .shadow-small {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.04);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.03);
 
   @include responsive(extra-small, small) {
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   }
+}
+</style>
+
+<style>
+.slick-slide.slick-current.slick-active .shadow-small {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 </style>
